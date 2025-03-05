@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Parking - User Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Smart</span> Parking</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current">Dashboard</a></li>
+                    <li><a href="#">Book Parking</a></li>
+                    <li><a href="#">My Bookings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><button class="loginbtn" onclick="window.location.href = 'index.html';">Logout</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Area -->
+    <section class="dashboard-container">
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <div class="welcome-content">
+                <h2>Welcome back, <span class="user-name">John Doe</span></h2>
+                <p>Manage your parking experience with ease</p>
+            </div>
+            <div class="welcome-actions">
+                <button class="action-btn"><i class="fas fa-plus-circle"></i> New Booking</button>
+            </div>
+        </div>
+        
+        <!-- Status Cards -->
+        <div class="status-cards">
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>Available Spots</h3>
+                <p>15</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Active Bookings</h3>
+                <p>2</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-history"></i>
+                <h3>Past Bookings</h3>
+                <p>25</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-wallet"></i>
+                <h3>Balance</h3>
+                <p>$50.00</p>
+            </div>
+        </div>
+        
+        <!-- Features Highlight -->
+        <div class="features-highlight">
+            <div class="highlight-item">
+                <div class="highlight-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="highlight-text">
+                    <h4>Save Time</h4>
+                    <p>Book your spot in advance</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="highlight-text">
+                    <h4>Easy Navigation</h4>
+                    <p>Get directions to your spot</p>
+                </div>
+            </div>
+            <div class="highlight-item">
+                <div class="highlight-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="highlight-text">
+                    <h4>Secure Parking</h4>
+                    <p>24/7 monitored facilities</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="dashboard-content">
+            <div class="content-row">
+                <!-- Quick Book Section -->
+                <div class="quick-book">
+                    <h2>Quick Book Parking</h2>
+                    <form class="booking-form">
+                        <div class="form-group">
+                            <label>Select Location</label>
+                            <select>
+                                <option>Parking Lot A</option>
+                                <option>Parking Lot B</option>
+                                <option>Parking Lot C</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <select>
+                                <option>1 Hour</option>
+                                <option>2 Hours</option>
+                                <option>4 Hours</option>
+                                <option>Full Day</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="book-btn">Book Now</button>
+                    </form>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-car"></i>
+                            <div class="activity-details">
+                                <h4>Parking Booked</h4>
+                                <p>Lot A - Space 12</p>
+                                <small>Today, 10:30 AM</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-money-bill"></i>
+                            <div class="activity-details">
+                                <h4>Payment Made</h4>
+                                <p>$10.00 - 2 Hour Parking</p>
+                                <small>Yesterday, 3:15 PM</small>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="activity-details">
+                                <h4>Checkout Complete</h4>
+                                <p>Lot C - Space 05</p>
+                                <small>Mar 15, 2:30 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-all">
+                        <a href="#">View All Activity <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Content Section -->
+            <div class="content-row">
+                <!-- Parking Map -->
+                <div class="parking-map">
+                    <h2>Parking Locations</h2>
+                    <div class="map-container">
+                        <div id="parkingMap" style="height: 300px;">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Loading parking locations...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-filters">
+                        <button class="location-filter active">All</button>
+                        <button class="location-filter">Downtown</button>
+                        <button class="location-filter">Airport</button>
+                        <button class="location-filter">Shopping Mall</button>
+                    </div>
+                </div>
+
+                <!-- Current Rates -->
+                <div class="rate-card">
+                    <h2>Current Rates</h2>
+                    <table class="rate-table">
+                        <tr>
+                            <th>Duration</th>
+                            <th>Rate</th>
+                        </tr>
+                        <tr>
+                            <td>1 Hour</td>
+                            <td>$2.00</td>
+                        </tr>
+                        <tr>
+                            <td>2 Hours</td>
+                            <td>$3.50</td>
+                        </tr>
+                        <tr>
+                            <td>4 Hours</td>
+                            <td>$6.00</td>
+                        </tr>
+                        <tr>
+                            <td>Full Day</td>
+                            <td>$10.00</td>
+                        </tr>
+                    </table>
+                    <div class="rate-note">
+                        <p><i class="fas fa-info-circle"></i> Special rates apply during events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Upcoming Reservations -->
+        <div class="upcoming-reservations">
+            <h2>Upcoming Reservations</h2>
+            <div class="reservation-cards">
+                <div class="reservation-card">
+                    <div class="reservation-date">
+                        <span class="day">25</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="reservation-details">
+                        <h4>Downtown Parking Lot A</h4>
+                        <p>Space: A12 • 09:00 AM - 11:00 AM</p>
+                        <div class="reservation-status pending">Pending</div>
+                    </div>
+                    <div class="reservation-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn cancel-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="reservation-card">
+                    <div class="reservation-date">
+                        <span class="day">28</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="reservation-details">
+                        <h4>Airport Terminal 2</h4>
+                        <p>Space: T2-15 • 02:00 PM - 06:00 PM</p>
+                        <div class="reservation-status confirmed">Confirmed</div>
+                    </div>
+                    <div class="reservation-actions">
+                        <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn edit-btn"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn cancel-btn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Support</a>
+                </div>
+                <p>&copy; 2024 Smart Parking System. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
